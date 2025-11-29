@@ -1,0 +1,658 @@
+// ==================== BRANCHES ====================
+export const BRANCHES = [
+  {
+    id: 'BR001',
+    name: 'Karaoke Thủ Đô - Trần Duy Hưng',
+    address: '123 Trần Duy Hưng, Cầu Giấy, Hà Nội',
+    phone: '024 3838 8888',
+    image: 'https://images.unsplash.com/photo-1565382038303-8c62e88d119a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBrYXJhb2tlJTIwcm9vbSUyMHB1cnBsZSUyMGxpZ2h0aW5nfGVufDF8fHx8MTc2MDM3MTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    totalRooms: 15,
+    operatingHours: '10:00 - 02:00',
+    rating: 4.8,
+    status: 'active',
+  },
+  {
+    id: 'BR002',
+    name: 'Karaoke Thủ Đô - Nguyễn Huệ',
+    address: '456 Nguyễn Huệ, Hoàn Kiếm, Hà Nội',
+    phone: '024 3939 9999',
+    image: 'https://images.unsplash.com/photo-1679205700241-bd122d6beaa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBrYXJhb2tlJTIwcm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDM3NTI2OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    totalRooms: 12,
+    operatingHours: '10:00 - 02:00',
+    rating: 4.7,
+    status: 'active',
+  },
+  {
+    id: 'BR003',
+    name: 'Karaoke Thủ Đô - Láng Hạ',
+    address: '789 Láng Hạ, Đống Đa, Hà Nội',
+    phone: '024 3737 7777',
+    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbSUyMGxpZ2h0c3xlbnwxfHx8fDE3NjAzNzUzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    totalRooms: 10,
+    operatingHours: '10:00 - 02:00',
+    rating: 4.6,
+    status: 'active',
+  },
+];
+
+// ==================== ROOMS ====================
+export const ROOMS = [
+  // VIP Rooms - Trần Duy Hưng
+  {
+    id: 'VIP01',
+    name: 'Phòng VIP 01',
+    category: 'VIP',
+    capacity: 15,
+    pricePerHour: 300000,
+    description: 'Phòng VIP cao cấp với âm thanh cực đỉnh',
+    image: 'https://images.unsplash.com/photo-1565382038303-8c62e88d119a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBrYXJhb2tlJTIwcm9vbSUyMHB1cnBsZSUyMGxpZ2h0aW5nfGVufDF8fHx8MTc2MDM3MTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 85 inch', 'Âm thanh Dolby Atmos', 'Ghế massage', 'Minibar', 'Karaoke AI'],
+    status: 'available',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'VIP02',
+    name: 'Phòng VIP 02',
+    category: 'VIP',
+    capacity: 15,
+    pricePerHour: 300000,
+    description: 'Phòng VIP sang trọng với nội thất cao cấp',
+    image: 'https://images.unsplash.com/photo-1565382038303-8c62e88d119a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBrYXJhb2tlJTIwcm9vbSUyMHB1cnBsZSUyMGxpZ2h0aW5nfGVufDF8fHx8MTc2MDM3MTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 85 inch', 'Âm thanh Dolby Atmos', 'Ghế massage', 'Minibar', 'Karaoke AI'],
+    status: 'occupied',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  
+  // Family Rooms - Trần Duy Hưng
+  {
+    id: 'FAM01',
+    name: 'Family 01',
+    category: 'Gia đình',
+    capacity: 10,
+    pricePerHour: 200000,
+    description: 'Phòng gia đình rộng rãi, thoải mái',
+    image: 'https://images.unsplash.com/photo-1679205700241-bd122d6beaa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBrYXJhb2tlJTIwcm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDM3NTI2OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 65 inch', 'Âm thanh JBL', 'Ghế sofa', 'Bàn tiệc'],
+    status: 'available',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'FAM02',
+    name: 'Family 02',
+    category: 'Gia đình',
+    capacity: 10,
+    pricePerHour: 200000,
+    description: 'Phòng gia đình ấm cúng cho buổi sum họp',
+    image: 'https://images.unsplash.com/photo-1679205700241-bd122d6beaa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBrYXJhb2tlJTIwcm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDM3NTI2OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 65 inch', 'Âm thanh JBL', 'Ghế sofa', 'Bàn tiệc'],
+    status: 'available',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  
+  // Couple Rooms - Trần Duy Hưng
+  {
+    id: 'COU01',
+    name: 'Couple 01',
+    category: 'Couple',
+    capacity: 4,
+    pricePerHour: 150000,
+    description: 'Phòng đôi lãng mạn cho cặp đôi',
+    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbSUyMGxpZ2h0c3xlbnwxfHx8fDE3NjAzNzUzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['Smart TV 55 inch', 'Âm thanh Sony', 'Ghế đôi', 'Ánh sáng RGB'],
+    status: 'available',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'COU02',
+    name: 'Couple 02',
+    category: 'Couple',
+    capacity: 4,
+    pricePerHour: 150000,
+    description: 'Phòng đôi với không gian riêng tư',
+    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbSUyMGxpZ2h0c3xlbnwxfHx8fDE3NjAzNzUzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['Smart TV 55 inch', 'Âm thanh Sony', 'Ghế đôi', 'Ánh sáng RGB'],
+    status: 'maintenance',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  
+  // Standard Rooms - Trần Duy Hưng
+  {
+    id: 'STD01',
+    name: 'Standard 01',
+    category: 'Thường',
+    capacity: 6,
+    pricePerHour: 100000,
+    description: 'Phòng tiêu chuẩn giá rẻ',
+    image: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrYXJhb2tlJTIwcm9vbSUyMGxpZ2h0c3xlbnwxfHx8fDE3NjAzNzUzMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['Smart TV 50 inch', 'Âm thanh cơ bản', 'Ghế ngồi'],
+    status: 'available',
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+
+  // Nguyễn Huệ Branch Rooms
+  {
+    id: 'VIP03',
+    name: 'Phòng VIP 03',
+    category: 'VIP',
+    capacity: 15,
+    pricePerHour: 300000,
+    description: 'Phòng VIP tại chi nhánh Nguyễn Huệ',
+    image: 'https://images.unsplash.com/photo-1565382038303-8c62e88d119a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBrYXJhb2tlJTIwcm9vbSUyMHB1cnBsZSUyMGxpZ2h0aW5nfGVufDF8fHx8MTc2MDM3MTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 85 inch', 'Âm thanh Dolby Atmos', 'Ghế massage', 'Minibar', 'Karaoke AI'],
+    status: 'available',
+    branchId: 'BR002',
+    branch: 'Nguyễn Huệ',
+  },
+  {
+    id: 'FAM03',
+    name: 'Family 03',
+    category: 'Gia đình',
+    capacity: 10,
+    pricePerHour: 200000,
+    description: 'Phòng gia đình tại Nguyễn Huệ',
+    image: 'https://images.unsplash.com/photo-1679205700241-bd122d6beaa3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBrYXJhb2tlJTIwcm9vbSUyMGludGVyaW9yfGVufDF8fHx8MTc2MDM3NTI2OXww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 65 inch', 'Âm thanh JBL', 'Ghế sofa', 'Bàn tiệc'],
+    status: 'available',
+    branchId: 'BR002',
+    branch: 'Nguyễn Huệ',
+  },
+
+  // Láng Hạ Branch Rooms
+  {
+    id: 'VIP04',
+    name: 'Phòng VIP 04',
+    category: 'VIP',
+    capacity: 15,
+    pricePerHour: 300000,
+    description: 'Phòng VIP tại chi nhánh Láng Hạ',
+    image: 'https://images.unsplash.com/photo-1565382038303-8c62e88d119a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBrYXJhb2tlJTIwcm9vbSUyMHB1cnBsZSUyMGxpZ2h0aW5nfGVufDF8fHx8MTc2MDM3MTkxM3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    features: ['4K TV 85 inch', 'Âm thanh Dolby Atmos', 'Ghế massage', 'Minibar', 'Karaoke AI'],
+    status: 'available',
+    branchId: 'BR003',
+    branch: 'Láng Hạ',
+  },
+];
+
+// ==================== STAFF ====================
+export const STAFF = [
+  {
+    id: 'NV001',
+    name: 'Nguyễn Văn A',
+    role: 'Phục vụ',
+    phone: '0912345678',
+    email: 'nguyenvana@email.com',
+    status: 'active',
+    baseSalary: 6000000,
+    bonus: 500000,
+    totalSalary: 6500000,
+    workHours: 160,
+    joinDate: '01/01/2024',
+    attendance: { present: 24, absent: 1, late: 2 },
+    leaves: 1,
+    violations: 0,
+    performance: 92,
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'NV002',
+    name: 'Trần Thị B',
+    role: 'Phục vụ',
+    phone: '0923456789',
+    email: 'tranthib@email.com',
+    status: 'active',
+    baseSalary: 6000000,
+    bonus: 800000,
+    totalSalary: 6800000,
+    workHours: 168,
+    joinDate: '15/01/2024',
+    attendance: { present: 26, absent: 0, late: 1 },
+    leaves: 0,
+    violations: 0,
+    performance: 96,
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'NV003',
+    name: 'Lê Văn C',
+    role: 'Pha chế',
+    phone: '0934567890',
+    email: 'levanc@email.com',
+    status: 'active',
+    baseSalary: 7000000,
+    bonus: 1000000,
+    totalSalary: 8000000,
+    workHours: 176,
+    joinDate: '01/02/2024',
+    attendance: { present: 25, absent: 1, late: 0 },
+    leaves: 1,
+    violations: 0,
+    performance: 88,
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'NV004',
+    name: 'Phạm Thị D',
+    role: 'Thu ngân',
+    phone: '0945678901',
+    email: 'phamthid@email.com',
+    status: 'active',
+    baseSalary: 7500000,
+    bonus: 600000,
+    totalSalary: 8100000,
+    workHours: 160,
+    joinDate: '10/02/2024',
+    attendance: { present: 24, absent: 2, late: 1 },
+    leaves: 2,
+    violations: 1,
+    performance: 85,
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'NV005',
+    name: 'Hoàng Văn E',
+    role: 'Bảo vệ',
+    phone: '0956789012',
+    email: 'hoangvane@email.com',
+    status: 'active',
+    baseSalary: 6500000,
+    bonus: 300000,
+    totalSalary: 6800000,
+    workHours: 184,
+    joinDate: '01/03/2024',
+    attendance: { present: 26, absent: 0, late: 0 },
+    leaves: 0,
+    violations: 0,
+    performance: 90,
+    branchId: 'BR001',
+    branch: 'Trần Duy Hưng',
+  },
+  {
+    id: 'NV006',
+    name: 'Vũ Thị F',
+    role: 'Phục vụ',
+    phone: '0967890123',
+    email: 'vuthif@email.com',
+    status: 'active',
+    baseSalary: 6000000,
+    bonus: 700000,
+    totalSalary: 6700000,
+    workHours: 168,
+    joinDate: '01/03/2024',
+    attendance: { present: 25, absent: 0, late: 1 },
+    leaves: 0,
+    violations: 0,
+    performance: 94,
+    branchId: 'BR002',
+    branch: 'Nguyễn Huệ',
+  },
+  {
+    id: 'NV007',
+    name: 'Đỗ Văn G',
+    role: 'Kỹ thuật',
+    phone: '0978901234',
+    email: 'dovang@email.com',
+    status: 'active',
+    baseSalary: 8000000,
+    bonus: 1200000,
+    totalSalary: 9200000,
+    workHours: 176,
+    joinDate: '15/01/2024',
+    attendance: { present: 26, absent: 0, late: 0 },
+    leaves: 0,
+    violations: 0,
+    performance: 98,
+    branchId: 'BR003',
+    branch: 'Láng Hạ',
+  },
+];
+
+// ==================== MENU ITEMS (Đồ ăn, đồ uống) ====================
+export const MENU_ITEMS = [
+  // Đồ uống
+  {
+    id: 'DRINK001',
+    name: 'Nước ngọt',
+    category: 'Đồ uống',
+    price: 15000,
+    unit: 'Lon',
+    description: 'Coca, Pepsi, 7Up, Sprite',
+    image: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=400',
+    stock: 200,
+    status: 'available',
+  },
+  {
+    id: 'DRINK002',
+    name: 'Trà sữa',
+    category: 'Đồ uống',
+    price: 35000,
+    unit: 'Ly',
+    description: 'Trà sữa trân châu đường đen',
+    image: 'https://images.unsplash.com/photo-1525385133512-2f3bdd039054?w=400',
+    stock: 50,
+    status: 'available',
+  },
+  {
+    id: 'DRINK003',
+    name: 'Bia Heineken',
+    category: 'Đồ uống',
+    price: 25000,
+    unit: 'Chai',
+    description: 'Bia Heineken 330ml',
+    image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400',
+    stock: 150,
+    status: 'available',
+  },
+  {
+    id: 'DRINK004',
+    name: 'Nước ép trái cây',
+    category: 'Đồ uống',
+    price: 40000,
+    unit: 'Ly',
+    description: 'Cam, Dứa, Dưa hấu, Táo',
+    image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400',
+    stock: 30,
+    status: 'available',
+  },
+  {
+    id: 'DRINK005',
+    name: 'Cocktail',
+    category: 'Đồ uống',
+    price: 80000,
+    unit: 'Ly',
+    description: 'Mojito, Margarita, Pina Colada',
+    image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400',
+    stock: 20,
+    status: 'available',
+  },
+
+  // Đồ ăn
+  {
+    id: 'FOOD001',
+    name: 'Snack',
+    category: 'Đồ ăn',
+    price: 20000,
+    unit: 'Gói',
+    description: 'Khoai tây chiên, Bắp rang bơ',
+    image: 'https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=400',
+    stock: 100,
+    status: 'available',
+  },
+  {
+    id: 'FOOD002',
+    name: 'Đĩa trái cây',
+    category: 'Đồ ăn',
+    price: 150000,
+    unit: 'Đĩa',
+    description: 'Trái cây tươi ngon theo mùa',
+    image: 'https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400',
+    stock: 20,
+    status: 'available',
+  },
+  {
+    id: 'FOOD003',
+    name: 'Mì tôm hảo hạng',
+    category: 'Đồ ăn',
+    price: 35000,
+    unit: 'Tô',
+    description: 'Mì tôm nấu với trứng và rau',
+    image: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400',
+    stock: 50,
+    status: 'available',
+  },
+  {
+    id: 'FOOD004',
+    name: 'Pizza',
+    category: 'Đồ ăn',
+    price: 250000,
+    unit: 'Chiếc',
+    description: 'Pizza hải sản / thịt / rau củ',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400',
+    stock: 15,
+    status: 'available',
+  },
+  {
+    id: 'FOOD005',
+    name: 'Nem rán',
+    category: 'Đồ ăn',
+    price: 80000,
+    unit: 'Đĩa',
+    description: '10 chiếc nem rán giòn',
+    image: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=400',
+    stock: 30,
+    status: 'available',
+  },
+];
+
+// ==================== COMBOS ====================
+export const COMBOS = [
+  {
+    id: 'COMBO001',
+    name: 'Combo Tiệc nhỏ',
+    description: '2 đĩa trái cây + 4 nước ngọt + 1 đĩa snack',
+    price: 350000,
+    originalPrice: 400000,
+    discount: 50000,
+    items: ['FOOD002 x2', 'DRINK001 x4', 'FOOD001 x1'],
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400',
+    status: 'available',
+  },
+  {
+    id: 'COMBO002',
+    name: 'Combo Sinh nhật',
+    description: '1 bánh kem + 10 nước ngọt + 2 đĩa trái cây + 5 snack',
+    price: 800000,
+    originalPrice: 900000,
+    discount: 100000,
+    items: ['DRINK001 x10', 'FOOD002 x2', 'FOOD001 x5'],
+    image: 'https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=400',
+    status: 'available',
+  },
+  {
+    id: 'COMBO003',
+    name: 'Combo Couple',
+    description: '2 trà sữa + 1 đĩa trái cây + 2 snack',
+    price: 180000,
+    originalPrice: 220000,
+    discount: 40000,
+    items: ['DRINK002 x2', 'FOOD002 x1', 'FOOD001 x2'],
+    image: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400',
+    status: 'available',
+  },
+  {
+    id: 'COMBO004',
+    name: 'Combo Party',
+    description: '1 Pizza + 10 Bia + 3 đĩa trái cây + 5 snack',
+    price: 650000,
+    originalPrice: 750000,
+    discount: 100000,
+    items: ['FOOD004 x1', 'DRINK003 x10', 'FOOD002 x3', 'FOOD001 x5'],
+    image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400',
+    status: 'available',
+  },
+];
+
+// ==================== PROMOTIONS ====================
+export const PROMOTIONS = [
+  {
+    id: 'PROMO001',
+    code: 'VIP20',
+    name: 'Giảm 20% phòng VIP cuối tuần',
+    description: 'Áp dụng cho tất cả phòng VIP từ thứ 6 đến chủ nhật',
+    discountType: 'percentage',
+    discountValue: 20,
+    startDate: '18/10/2025',
+    endDate: '31/12/2025',
+    targetCustomer: 'all',
+    targetRoomType: 'vip',
+    status: 'active',
+    usageCount: 45,
+    revenueGenerated: 125000000,
+    createdBy: 'Quản lý',
+    createdAt: '15/10/2025',
+    approvalStatus: 'approved',
+  },
+  {
+    id: 'PROMO002',
+    code: 'HAPPY14',
+    name: 'Happy Hour 14h-17h',
+    description: 'Giảm 15% cho tất cả phòng trong khung giờ vàng',
+    discountType: 'percentage',
+    discountValue: 15,
+    startDate: '20/10/2025',
+    endDate: '20/11/2025',
+    targetCustomer: 'all',
+    targetRoomType: 'all',
+    status: 'active',
+    usageCount: 78,
+    revenueGenerated: 89000000,
+    createdBy: 'Quản lý',
+    createdAt: '18/10/2025',
+    approvalStatus: 'approved',
+  },
+  {
+    id: 'PROMO003',
+    code: 'HALLOWEEN30',
+    name: 'Halloween Party 2025',
+    description: 'Giảm 30% toàn bộ hệ thống dịp Halloween',
+    discountType: 'percentage',
+    discountValue: 30,
+    startDate: '31/10/2025',
+    endDate: '01/11/2025',
+    targetCustomer: 'all',
+    targetRoomType: 'all',
+    status: 'upcoming',
+    usageCount: 0,
+    revenueGenerated: 0,
+    createdBy: 'Quản lý',
+    createdAt: '13/10/2025',
+    approvalStatus: 'pending',
+  },
+];
+
+// ==================== BOOKINGS ====================
+export const BOOKINGS = [
+  {
+    id: 'BK001',
+    customerId: 'CU001',
+    customerName: 'Nguyễn Văn A',
+    room: 'VIP 01',
+    roomId: 'VIP01',
+    branch: 'Trần Duy Hưng',
+    branchId: 'BR001',
+    date: '15/10/2025',
+    time: '19:00 - 22:00',
+    startTime: '19:00',
+    endTime: '22:00',
+    duration: 3,
+    guests: 12,
+    amount: '900.000đ',
+    status: 'upcoming',
+    paymentStatus: 'paid',
+    note: 'Sinh nhật bạn',
+    createdAt: '13/10/2025 14:30',
+  },
+  {
+    id: 'BK002',
+    customerId: 'CU002',
+    customerName: 'Trần Thị B',
+    room: 'Family 01',
+    roomId: 'FAM01',
+    branch: 'Trần Duy Hưng',
+    branchId: 'BR001',
+    date: '10/10/2025',
+    time: '18:00 - 21:00',
+    startTime: '18:00',
+    endTime: '21:00',
+    duration: 3,
+    guests: 8,
+    amount: '600.000đ',
+    status: 'completed',
+    paymentStatus: 'paid',
+    note: '',
+    createdAt: '09/10/2025 10:00',
+  },
+];
+
+// ==================== ORDERS ====================
+export const ORDERS = [
+  {
+    id: 'ORD001',
+    roomId: 'VIP01',
+    roomName: 'VIP 01',
+    items: [
+      { id: 'DRINK001', name: 'Nước ngọt', quantity: 4, price: 15000 },
+      { id: 'FOOD001', name: 'Snack', quantity: 2, price: 20000 },
+      { id: 'DRINK002', name: 'Trà sữa', quantity: 2, price: 35000 },
+    ],
+    total: 170000,
+    status: 'pending',
+    createdAt: '13/10/2025 20:15',
+    note: '',
+  },
+  {
+    id: 'ORD002',
+    roomId: 'FAM01',
+    roomName: 'Family 01',
+    items: [
+      { id: 'COMBO001', name: 'Combo Tiệc nhỏ', quantity: 1, price: 350000 },
+      { id: 'DRINK003', name: 'Bia Heineken', quantity: 6, price: 25000 },
+    ],
+    total: 500000,
+    status: 'completed',
+    createdAt: '13/10/2025 19:30',
+    note: '',
+  },
+];
+
+// ==================== HELPER FUNCTIONS ====================
+export const getRoomsByBranch = (branchId: string) => {
+  return ROOMS.filter(room => room.branchId === branchId);
+};
+
+export const getStaffByBranch = (branchId: string) => {
+  return STAFF.filter(staff => staff.branchId === branchId);
+};
+
+export const getRoomById = (roomId: string) => {
+  return ROOMS.find(room => room.id === roomId);
+};
+
+export const getStaffById = (staffId: string) => {
+  return STAFF.find(staff => staff.id === staffId);
+};
+
+export const getBranchById = (branchId: string) => {
+  return BRANCHES.find(branch => branch.id === branchId);
+};
+
+export const getMenuItemById = (itemId: string) => {
+  return MENU_ITEMS.find(item => item.id === itemId);
+};
+
+export const getComboById = (comboId: string) => {
+  return COMBOS.find(combo => combo.id === comboId);
+};
+
+export const getPromotionByCode = (code: string) => {
+  return PROMOTIONS.find(promo => promo.code === code);
+};
+
+// Room Categories
+export const ROOM_CATEGORIES = ['VIP', 'Gia đình', 'Couple', 'Thường'];
+
+// Staff Roles
+export const STAFF_ROLES = ['Phục vụ', 'Pha chế', 'Thu ngân', 'Bảo vệ', 'Kỹ thuật'];
+
+// Menu Categories
+export const MENU_CATEGORIES = ['Đồ uống', 'Đồ ăn'];
